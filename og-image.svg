@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Fundo -->
+  <rect width="1200" height="630" fill="#080706"/>
+
+  <!-- Grid técnico sutil -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1c1814" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- Glow laranja direita -->
+  <radialGradient id="glow" cx="80%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#c8601a" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#080706" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Borda interna -->
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#2a2420" stroke-width="1"/>
+
+  <!-- Cantos laranja -->
+  <polyline points="24,80 24,24 80,24" fill="none" stroke="#c8601a" stroke-width="3" stroke-linecap="square"/>
+  <polyline points="1120,24 1176,24 1176,80" fill="none" stroke="#c8601a" stroke-width="3" stroke-linecap="square"/>
+  <polyline points="24,550 24,606 80,606" fill="none" stroke="#c8601a" stroke-width="3" stroke-linecap="square"/>
+  <polyline points="1120,606 1176,606 1176,550" fill="none" stroke="#c8601a" stroke-width="3" stroke-linecap="square"/>
+
+  <!-- Linha laranja horizontal central -->
+  <line x1="80" y1="370" x2="560" y2="370" stroke="#c8601a" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- PKORTES - headline principal -->
+  <text x="80" y="300" font-family="'Big Shoulders Display', 'Arial Black', sans-serif" font-weight="900" font-size="180" fill="#ede8e1" letter-spacing="-2">PKORTES</text>
+
+  <!-- GARAGE CUTS -->
+  <text x="83" y="420" font-family="'Big Shoulders Display', 'Arial Black', sans-serif" font-weight="600" font-size="38" fill="#c8601a" letter-spacing="18">GARAGE CUTS</text>
+
+  <!-- Divisor vertical direito -->
+  <line x1="760" y1="80" x2="760" y2="550" stroke="#2a2420" stroke-width="1"/>
+
+  <!-- Info direita -->
+  <!-- Label -->
+  <text x="820" y="200" font-family="'Arial', sans-serif" font-weight="700" font-size="16" fill="#c8601a" letter-spacing="4">BARBEARIA PREMIUM</text>
+
+  <!-- Tagline -->
+  <text x="820" y="280" font-family="'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#ede8e1">CORTE</text>
+  <text x="820" y="345" font-family="'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#ede8e1">PRECISO.</text>
+  <text x="820" y="410" font-family="'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#c8601a">SEM</text>
+  <text x="820" y="475" font-family="'Arial Black', sans-serif" font-weight="900" font-size="52" fill="#c8601a">IMPROVISO.</text>
+
+  <!-- Endereço -->
+  <text x="820" y="545" font-family="'Arial', sans-serif" font-weight="400" font-size="18" fill="#4a4440" letter-spacing="1">Araraquara · SP</text>
+</svg>
