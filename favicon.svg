@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fundo carvão -->
+  <rect width="64" height="64" fill="#080706"/>
+  <!-- Borda interna fina -->
+  <rect x="3" y="3" width="58" height="58" fill="none" stroke="#2a2420" stroke-width="1"/>
+  <!-- Cantos em laranja -->
+  <polyline points="3,12 3,3 12,3" fill="none" stroke="#c8601a" stroke-width="2.5" stroke-linecap="square"/>
+  <polyline points="52,3 61,3 61,12" fill="none" stroke="#c8601a" stroke-width="2.5" stroke-linecap="square"/>
+  <polyline points="3,52 3,61 12,61" fill="none" stroke="#c8601a" stroke-width="2.5" stroke-linecap="square"/>
+  <polyline points="52,61 61,61 61,52" fill="none" stroke="#c8601a" stroke-width="2.5" stroke-linecap="square"/>
+  <!-- Letras PK -->
+  <text x="32" y="44" font-family="'Big Shoulders Display', 'Arial Black', sans-serif" font-weight="900" font-size="32" fill="#ede8e1" text-anchor="middle" letter-spacing="1">PK</text>
+  <!-- Linha laranja embaixo do texto -->
+  <line x1="16" y1="48" x2="48" y2="48" stroke="#c8601a" stroke-width="1.5" opacity="0.7"/>
+</svg>

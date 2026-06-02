@@ -6,6 +6,7 @@
   <meta name="description" content="PKORTES Garage Cuts — Barbearia premium em Araraquara. Corte masculino, barba e acabamento com hora marcada. Agende pelo WhatsApp.">
   <title>PKORTES Garage Cuts — Araraquara</title>
 
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -262,6 +263,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
+      padding-inline: clamp(1rem, 4vw, 2rem);
     }
 
     .logo {
@@ -2095,17 +2097,17 @@
 
           </div>
 
-          <div class="localizacao-map reveal-scale" role="img" aria-label="Mapa de localização — R. Cruzeiro do Sul, 550, Jardim Morumbi, Araraquara, SP">
-            <svg class="map-placeholder-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <p class="map-placeholder-text">Mapa</p>
-            <p class="map-placeholder-address">R. Cruzeiro do Sul, 550<br>Jardim Morumbi · Araraquara · SP</p>
-            <a href="https://maps.google.com/?q=R.+Cruzeiro+do+Sul,+550,+Jardim+Morumbi,+Araraquara,+SP"
-               class="btn btn-outline-accent"
-               target="_blank" rel="noopener noreferrer"
-               style="margin-top:.5rem"
-               aria-label="Ver no Google Maps">
-              Ver no Google Maps
-            </a>
+          <div class="localizacao-map reveal-scale" style="padding:0;overflow:hidden;" aria-label="Mapa de localização — R. Cruzeiro do Sul, 550, Jardim Morumbi, Araraquara, SP">
+            <iframe
+              src="https://maps.google.com/maps?q=R.+Cruzeiro+do+Sul,+550,+Jardim+Morumbi,+Araraquara,+SP,+14801-465&output=embed&hl=pt-BR"
+              width="100%"
+              height="100%"
+              style="border:0;min-height:420px;filter:grayscale(1) invert(0.92) contrast(0.9) hue-rotate(175deg);display:block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização da PKORTES Garage Cuts no Google Maps">
+            </iframe>
           </div>
 
         </div>
