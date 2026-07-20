@@ -25,7 +25,7 @@
   <meta name="twitter:image"       content="https://pkortes-garage-cuts.vercel.app/og-image.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 
   <style>
     /* ═══════════════════════════════════════════
@@ -1466,6 +1466,222 @@
       outline: 2px solid var(--accent);
       outline-offset: 3px;
     }
+
+    /* ═══════════════════════════════════════════
+       IDENTIDADE SPRAY — lettering de rua da marca
+       (logo pintado, coroa, pinceladas laranja).
+       Bloco isolado no fim do <style> para vencer
+       o cascade. Para reverter: descartar a branch
+       ui/identidade-spray.
+    ═══════════════════════════════════════════ */
+    :root {
+      --font-spray: 'Sedgwick Ave Display', 'Big Shoulders Display', sans-serif;
+      --paint: #f5efe6;
+    }
+
+    /* grão um pouco mais presente, textura de parede */
+    body::before { opacity: .035; }
+
+    /* ── logo pintado no header ── */
+    .logo-spray {
+      font-family: var(--font-spray);
+      font-weight: 400;
+      font-size: 1.4rem;
+      letter-spacing: .03em;
+      transform: rotate(-2deg);
+      color: var(--paint);
+    }
+
+    .logo-spray span {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      font-family: var(--font-body);
+    }
+
+    .logo-spray span svg { color: var(--accent); }
+
+    /* ── hero: headline pintada à mão ── */
+    .spray-headline {
+      font-family: var(--font-spray);
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 1.12;
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      letter-spacing: .01em;
+    }
+
+    .spray-l1 {
+      position: relative;
+      display: inline-block;
+      color: var(--paint);
+      transform: rotate(-.6deg);
+    }
+
+    .spray-l2 {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 1.16em;
+      transform: rotate(-1.6deg);
+      transform-origin: left center;
+    }
+
+    .hero-crown {
+      position: absolute;
+      top: -2.3rem;
+      left: -.8rem;
+      width: 52px;
+      color: var(--accent);
+      transform: rotate(-10deg);
+    }
+
+    .hero-crown path {
+      stroke: currentColor;
+      stroke-width: 3;
+      fill: none;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: crownDraw 1.1s var(--ease-out) 1.05s forwards;
+    }
+
+    @keyframes crownDraw { to { stroke-dashoffset: 0; } }
+
+    /* risco de tinta sob a palavra-chave */
+    .u-paint {
+      display: inline-block;
+      padding-bottom: .16em;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 18' preserveAspectRatio='none'%3E%3Cpath d='M4 12 C60 7, 120 14, 236 8' stroke='%23ede8e1' stroke-width='5' fill='none' stroke-linecap='round' opacity='.9'/%3E%3Cpath d='M10 15 C80 11, 150 16, 200 12' stroke='%23ede8e1' stroke-width='2.5' fill='none' stroke-linecap='round' opacity='.45'/%3E%3C/svg%3E") no-repeat bottom center / 100% .2em;
+    }
+
+    /* stencil fantasma na parede do hero */
+    .hero-wall-text {
+      position: absolute;
+      left: -1%;
+      bottom: 3%;
+      z-index: 1;
+      font-family: var(--font-spray);
+      font-size: clamp(5rem, 13vw, 11rem);
+      text-transform: uppercase;
+      line-height: .9;
+      white-space: nowrap;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(237, 232, 225, .05);
+      transform: rotate(-4deg);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @supports not (-webkit-text-stroke: 1px red) {
+      .hero-wall-text { color: rgba(237, 232, 225, .04); }
+    }
+
+    /* foto do hero como pôster colado ── sombra dura serigrafia */
+    .hero-foto {
+      transform: rotate(1.5deg);
+      border-radius: 3px;
+      box-shadow: 10px 12px 0 rgba(200, 96, 26, .16), 0 24px 80px rgba(0, 0, 0, .7);
+    }
+
+    /* ── marquee vira faixa de tinta inclinada ── */
+    .marquee-strip {
+      background: var(--accent);
+      border-block: none;
+      transform: rotate(-1.4deg) scale(1.03);
+      margin-block: 1.5rem;
+      box-shadow: 0 10px 40px rgba(200, 96, 26, .15);
+    }
+
+    .marquee-item {
+      font-family: var(--font-spray);
+      font-weight: 400;
+      font-size: .95rem;
+      letter-spacing: .05em;
+      color: #17110b;
+    }
+
+    .marquee-dot { background: #17110b; }
+
+    /* ── palavra de impacto dos títulos ── */
+    .spray-word {
+      font-family: var(--font-spray);
+      font-weight: 400;
+      font-size: 1.04em;
+      color: var(--accent);
+      display: inline-block;
+      transform: rotate(-2deg);
+      padding: .04em .02em;
+    }
+
+    /* números dos diferenciais em graffiti */
+    .diferencial-number {
+      font-family: var(--font-spray);
+      font-weight: 400;
+    }
+
+    /* tags dos serviços com traço de marcador */
+    .servico-tag {
+      font-family: var(--font-spray);
+      font-weight: 400;
+      font-size: .85rem;
+      letter-spacing: .08em;
+      display: inline-block;
+      transform: rotate(-1.5deg);
+    }
+
+    /* selo "mais pedido" vira adesivo torto com coroa */
+    .servico-badge {
+      transform: rotate(4deg);
+      border-radius: 3px 10px 4px 8px;
+      box-shadow: 2px 3px 0 rgba(0, 0, 0, .35);
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+    }
+
+    .servico-badge svg { flex-shrink: 0; }
+
+    /* ── galeria como fotos coladas na parede ── */
+    .galeria-layout { gap: 14px; }
+
+    .galeria-item {
+      transition: transform .35s var(--ease-out);
+      border-radius: 2px;
+    }
+
+    .galeria-item:nth-child(odd) { transform: rotate(-1deg); }
+    .galeria-item:nth-child(even) { transform: rotate(1.2deg); }
+
+    .galeria-item:hover {
+      transform: rotate(0deg) scale(1.02);
+      z-index: 2;
+    }
+
+    /* fita adesiva no topo de cada foto */
+    .galeria-item::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-4deg);
+      width: 72px;
+      height: 20px;
+      background: rgba(237, 232, 225, .16);
+      border: 1px solid rgba(237, 232, 225, .06);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero-crown { width: 42px; top: -1.9rem; left: -.4rem; }
+      .hero-wall-text { font-size: clamp(4rem, 18vw, 7rem); bottom: 1%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-crown path { animation: none; stroke-dashoffset: 0; }
+      .galeria-item, .galeria-item:hover { transition: none; }
+    }
   </style>
 </head>
 
@@ -1476,15 +1692,11 @@
     <div class="container header-inner">
 
       <a href="#hero" class="logo" aria-label="PKORTES Garage Cuts — voltar ao início">
-        <svg class="logo-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <rect width="36" height="36" fill="var(--surface-3)"/>
-          <rect x="4" y="4" width="28" height="28" fill="none" stroke="var(--accent)" stroke-width="1"/>
-          <rect x="8" y="8" width="20" height="20" fill="none" stroke="var(--border-2)" stroke-width=".5"/>
-          <text x="18" y="23" font-family="'Big Shoulders Display',sans-serif" font-weight="900" font-size="12" fill="var(--accent)" text-anchor="middle" letter-spacing="1">PK</text>
-        </svg>
-        <div class="logo-text">
+        <div class="logo-text logo-spray">
           PKORTES
-          <span>Garage Cuts</span>
+          <span>Garage
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></svg>
+            Cuts</span>
         </div>
       </a>
 
@@ -1532,6 +1744,7 @@
     <section id="hero" aria-label="Seção principal">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="hero-wall-text" aria-hidden="true">Garage Cuts</div>
 
       <div class="hero-content">
 
@@ -1540,11 +1753,12 @@
           <span class="t-label">Araraquara · SP</span>
         </div>
 
-        <h1 class="t-display hero-headline">
-          Corte<br>
-          <em>Preciso.</em>
-          Sem<br>
-          Improviso.
+        <h1 class="hero-headline spray-headline">
+          <span class="spray-l1">
+            <svg class="hero-crown" viewBox="0 0 64 42" fill="none" aria-hidden="true"><path pathLength="100" d="M9 34 L13 13 L24 25 L32 7 L40 25 L51 13 L55 34 Q32 30 9 34 Z"/></svg>
+            Corte preciso.
+          </span><br>
+          <span class="spray-l2">Sem <span class="u-paint">improviso.</span></span>
         </h1>
 
         <p class="hero-sub">
@@ -1570,7 +1784,7 @@
         <div class="hero-logo-frame">
 
           <!-- Foto do PK no hero -->
-          <img src="pk-hero-oculos.png" alt="PK — dono da PKORTES Garage Cuts" loading="eager" style="width:100%;height:auto;border-radius:16px;box-shadow:0 24px 80px rgba(0,0,0,.7);position:relative;z-index:1;">
+          <img src="pk-hero-oculos.png" alt="PK — dono da PKORTES Garage Cuts" loading="eager" class="hero-foto" style="width:100%;height:auto;position:relative;z-index:1;">
 
 
         </div>
@@ -1613,7 +1827,7 @@
           <p class="t-label">Por que a PKORTES</p>
           <h2 class="t-headline" id="diferenciais-heading">
             Direto ao<br>
-            <span style="color:var(--accent)">Ponto.</span>
+            <span class="spray-word">Ponto.</span>
           </h2>
         </div>
 
@@ -1657,7 +1871,7 @@
         <div class="section-header reveal">
           <p class="t-label">O que fazemos</p>
           <h2 class="t-headline" id="servicos-heading">
-            Serviços
+            <span class="spray-word">Serviços</span>
           </h2>
           <p style="color:var(--text-2);font-size:.95rem;font-weight:300;margin-top:.75rem;max-width:480px;">
             Clique em qualquer serviço para ver o que está incluso e agendar direto pelo WhatsApp.
@@ -1752,7 +1966,10 @@
 
           <!-- Corte + Barba -->
           <article class="servico-card servico-destaque reveal" data-delay="3" role="listitem" aria-expanded="false">
-            <div class="servico-badge" aria-label="Serviço mais pedido">Mais pedido</div>
+            <div class="servico-badge" aria-label="Serviço mais pedido">
+              <svg width="13" height="9" viewBox="0 0 64 42" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M9 34 L13 13 L24 25 L32 7 L40 25 L51 13 L55 34 Q32 30 9 34 Z"/></svg>
+              Mais pedido
+            </div>
             <div class="servico-card-header">
               <div class="servico-tag">Combo</div>
               <h3 class="servico-nome">Corte + Barba</h3>
@@ -1850,7 +2067,7 @@
           <p class="t-label">Quem fala por nós</p>
           <h2 class="t-headline" id="depoimentos-heading">
             Resultado<br>
-            <span style="color:var(--accent)">Fala.</span>
+            <span class="spray-word">Fala.</span>
           </h2>
         </div>
 
@@ -1925,7 +2142,7 @@
           <p class="t-label">O espaço</p>
           <h2 class="t-headline" id="ambiente-heading">
             Ambiente que<br>
-            <span style="color:var(--accent)">Entrega.</span>
+            <span class="spray-word">Entrega.</span>
           </h2>
         </div>
 
@@ -1976,7 +2193,7 @@
         <div class="section-header reveal">
           <p class="t-label">Como chegar</p>
           <h2 class="t-headline" id="localizacao-heading">
-            Nos encontre
+            Nos <span class="spray-word">encontre</span>
           </h2>
         </div>
 
@@ -2075,7 +2292,7 @@
           <p class="t-label" style="margin-bottom:1.25rem">Próximo passo</p>
           <h2 class="t-display cta-final-headline" id="cta-heading">
             Agenda<br>
-            <span style="color:var(--accent)">Aberta.</span>
+            <span class="spray-word u-paint">Aberta.</span>
           </h2>
           <p class="cta-final-sub">
             Sem complicação. Manda mensagem pelo WhatsApp, escolhe o horário e aparece. A cadeira é sua.
