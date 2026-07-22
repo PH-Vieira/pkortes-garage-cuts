@@ -40,10 +40,10 @@
       --border:       #2a2420;
       --border-2:     #352f28;
 
-      --accent:       #c8601a;
-      --accent-light: #e07535;
-      --amber:        #a8720e;
-      --amber-light:  #c9920f;
+      --accent:       #c79a5f;
+      --accent-light: #dab27e;
+      --amber:        #a8863f;
+      --amber-light:  #c9a463;
 
       --text:         #ede8e1;
       --text-2:       #b0a89e;
@@ -172,13 +172,13 @@
 
     .btn-primary {
       background: var(--accent);
-      color: var(--text);
+      color: var(--bg);
     }
 
     .btn-primary:hover {
       background: var(--accent-light);
       transform: translateY(-1px);
-      box-shadow: 0 8px 32px rgba(200, 96, 26, .35);
+      box-shadow: 0 8px 32px rgba(199, 154, 95, .35);
     }
 
     .btn-ghost {
@@ -199,9 +199,9 @@
 
     .btn-outline-accent:hover {
       background: var(--accent);
-      color: var(--text);
+      color: var(--bg);
       transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(200, 96, 26, .3);
+      box-shadow: 0 8px 24px rgba(199, 154, 95, .3);
     }
 
     .btn svg { flex-shrink: 0; }
@@ -419,8 +419,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(200,96,26,.06) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 40% at 15% 80%, rgba(168,114,14,.04) 0%, transparent 50%);
+        radial-gradient(ellipse 60% 80% at 70% 50%, rgba(199,154,95,.06) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 15% 80%, rgba(168,134,63,.04) 0%, transparent 50%);
     }
 
     .hero-grid-lines {
@@ -694,7 +694,7 @@
       position: absolute;
       top: 0; right: 0;
       width: 500px; height: 500px;
-      background: radial-gradient(ellipse at 100% 0%, rgba(200,96,26,.05) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 100% 0%, rgba(199,154,95,.05) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -747,7 +747,7 @@
       transition: color .3s;
     }
 
-    .diferencial-item:hover .diferencial-number { color: rgba(200,96,26,.2); }
+    .diferencial-item:hover .diferencial-number { color: rgba(199,154,95,.22); }
 
     .diferencial-title {
       font-family: var(--font-display);
@@ -973,7 +973,7 @@
       top: clamp(1.75rem, 3vw, 2.25rem);
       right: clamp(1.75rem, 3vw, 2.25rem);
       background: var(--accent);
-      color: var(--text);
+      color: var(--bg);
       font-size: .6rem;
       font-weight: 700;
       letter-spacing: .1em;
@@ -1280,7 +1280,7 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(200,96,26,.08) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(199,154,95,.08) 0%, transparent 60%);
     }
 
     #cta-final::after {
@@ -1582,7 +1582,7 @@
     .hero-foto {
       transform: rotate(1.5deg);
       border-radius: 3px;
-      box-shadow: 10px 12px 0 rgba(200, 96, 26, .16), 0 24px 80px rgba(0, 0, 0, .7);
+      box-shadow: 10px 12px 0 rgba(199, 154, 95, .16), 0 24px 80px rgba(0, 0, 0, .7);
     }
 
     /* ── marquee vira faixa de tinta inclinada ── */
@@ -1591,7 +1591,7 @@
       border-block: none;
       transform: rotate(-1.4deg) scale(1.03);
       margin-block: 1.5rem;
-      box-shadow: 0 10px 40px rgba(200, 96, 26, .15);
+      box-shadow: 0 10px 40px rgba(199, 154, 95, .15);
     }
 
     .marquee-item {
